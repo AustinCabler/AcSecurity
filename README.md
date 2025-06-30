@@ -1,6 +1,6 @@
 # 🔒AcSecurity
 
-## 📕Bio
+## 📕 Bio
 
 AcSecurity is a provider of advanced security solutions specializing in protecting businesses and individuals from digital and physical threats. AcSecurity delivers comprehensive services including cybersecurity consulting, network protection, access control systems, surveillance installation, and risk management.
 
@@ -13,7 +13,3 @@ With a focus on innovation and reliability, AcSecurity combines cutting-edge tec
 ## 👍Founder
 
 Austin Cabler or also known as AcGaming
-
-### Note
-
-- this is in Development there is still Security issues at this time
