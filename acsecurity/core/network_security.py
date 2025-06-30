@@ -24,7 +24,16 @@ def detect_intrusion():
     import os
 
     # This function could be expanded to include more sophisticated intrusion detection logic
-    suspicious_files = ['/etc/passwd', '/etc/shadow']
+    suspicious_files = [
+        '/etc/passwd',
+        '/etc/shadow',
+        '/usr/bin/nc',           # Netcat, often used by attackers
+        '/tmp/malware',          # Example suspicious file
+        '/var/tmp/suspicious',   # Example suspicious file
+        '/bin/bash',             # Check for shell replacement
+        '/root/.ssh/authorized_keys',  # Check for unauthorized SSH keys
+        '/usr/local/bin/reverse_shell', # Custom reverse shell
+    ]
     for file in suspicious_files:
         if os.path.exists(file):
             print(f"Suspicious file detected: {file}")

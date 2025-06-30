@@ -13,3 +13,7 @@ With a focus on innovation and reliability, AcSecurity combines cutting-edge tec
 ## 👍Founder
 
 Austin Cabler or also known as AcGaming
+
+### Note
+
+- this is in Development there is still Security issues at this time

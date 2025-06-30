@@ -1,5 +1,4 @@
-from imaplib import _Authenticator
-
+from acsecurity.utils.logger import log_info
 
 def authenticate_user(username, password):
     """
@@ -42,14 +41,25 @@ def revoke_access(resource):
         None
     """
     pass
-def log_access_attempt(username, resource, success):
-    """ Logs an access attempt.
+def log_access_attempt(username, resource, success, ip_address=None, user_agent=None):
+    """
+    Logs an access attempt with detailed information.
     Args:  
         username (str): The username of the user attempting access.
         resource (str): The resource being accessed.
         success (bool): Whether the access attempt was successful.
+        ip_address (str, optional): The IP address of the user (if available).
+        user_agent (str, optional): The user's device or browser info (if available).
     Returns:
         None
     """
-    with open("access_log.txt", "a") as log_file:
-        log_file.write(f"User: {username}, Resource: {resource}, Success: {success}\n")
+    status = "SUCCESS" if success else "FAILURE"
+    log_message = (
+        f"Access Attempt | User: {username} | Resource: {resource} | "
+        f"Status: {status}"
+    )
+    if ip_address:
+        log_message += f" | IP: {ip_address}"
+    if user_agent:
+        log_message += f" | Agent: {user_agent}"
+    log_info(log_message)
