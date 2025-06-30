@@ -67,6 +67,7 @@ Example features in the console:
 - Add real-time email/SMS alerts for security events
 - Expand surveillance features (camera streaming, motion detection)
 - Package as a Docker container for easy deployment
+- Security Improvements
 
 ---
 
